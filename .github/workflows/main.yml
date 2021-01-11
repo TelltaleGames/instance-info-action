@@ -1,0 +1,9 @@
+on: [push]
+
+jobs:
+  info:
+    runs-on: self-hosted
+    name: Instance Info Test
+    steps:
+    - name: instance info action step
+      uses: TelltaleGames/instance-info-action@main

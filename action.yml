@@ -1,0 +1,5 @@
+name: 'InstanceInfo'
+description: 'Print instance info to the logs.'
+runs:
+  using: 'node12'
+  main: 'build/index.js'

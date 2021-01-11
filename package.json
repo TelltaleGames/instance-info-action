@@ -1,0 +1,27 @@
+{
+  "name": "instance-info-action",
+  "version": "1.0.0",
+  "description": "Print instance info to the logs.",
+  "main": "src/main.js",
+  "scripts": {
+    "run": "node src/main.js",
+    "build": "ncc build src/main.js -o build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TelltaleGames/instance-info-action.git"
+  },
+  "author": "Telltale Games",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TelltaleGames/instance-info-action/issues"
+  },
+  "homepage": "https://github.com/TelltaleGames/instance-info-action#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@vercel/ncc": "^0.26.1",
+    "node-fetch": "^2.6.1",
+    "@actions/core": "^1.2.6",
+    "@actions/github": "^4.0.0"
+  }
+}
