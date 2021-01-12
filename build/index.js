@@ -5809,7 +5809,7 @@ const github = __nccwpck_require__(438);
 const fetch = __nccwpck_require__(467);
 
 async function get_info() {
-    let instanceId = ((await fetch("http://169.254.169.254/latest/meta-data/instance-id")).text());
+    let instanceId = await ((await fetch("http://169.254.169.254/latest/meta-data/instance-id")).text());
     core.info(`Instance Id: ${instanceId}`);
     core.info(`Connect: https://console.aws.amazon.com/systems-manager/session-manager/${instanceId}`);
 }
