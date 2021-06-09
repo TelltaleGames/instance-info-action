@@ -5810,8 +5810,10 @@ const fetch = __nccwpck_require__(467);
 
 async function get_info() {
     let instanceId = await ((await fetch("http://169.254.169.254/latest/meta-data/instance-id")).text());
+    let region = await ((await fetch("http://169.254.169.254/latest/meta-data/placement/region")).text());
     core.info(`Instance Id: ${instanceId}`);
-    core.info(`Connect: https://console.aws.amazon.com/systems-manager/session-manager/${instanceId}`);
+    core.info(`Region: ${region}`);
+    core.info(`Connect: https://${region}.console.aws.amazon.com/systems-manager/session-manager/${instanceId}`);
 }
 
 try {
