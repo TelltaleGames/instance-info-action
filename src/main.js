@@ -2,7 +2,6 @@
 // See LICENSE for usage, modification, and distribution terms.
 const core = require('@actions/core');
 const github = require('@actions/github');
-const fetch = require('node-fetch');
 
 async function get_info() {
     let instanceId = await ((await fetch("http://169.254.169.254/latest/meta-data/instance-id")).text());
