@@ -15,5 +15,8 @@ async function get_info() {
 try {
     get_info();
 } catch(error) {
-    core.setFailed(error.message);
+    // Not an error, as we don't want to fail a build on a non-aws builder.
+    core.info(`Get Instance failure`);
+    core.info(error.message);
+    //core.setFailed(error.message);
 }
